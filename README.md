@@ -3,6 +3,8 @@
 A personal portfolio site built around a "strategy brief" visual identity — presenting both sides
 of my work: business strategy and applied AI/product building.
 
+**Live site:** [mayanksharma14.vercel.app](https://mayanksharma14.vercel.app/)
+
 ---
 
 ## About
