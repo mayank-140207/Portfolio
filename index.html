@@ -1,400 +1,194 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mayank Sharma — Strategy &amp; Build</title>
-<meta name="description" content="Mayank Sharma — Chief Strategy Officer at Baoiam Innovations, CSE student at GLA University. Strategy, go-to-market, and applied AI builds.">
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mayank Sharma</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Mayank Sharma. Applied AI builder, product thinker and CSE student at GLA University, Mathura.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="warp" x="-5%" y="-10%" width="110%" height="120%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.012 0.05" numOctaves="2" seed="4" result="n"/>
+    <feDisplacementMap id="warpmap" in="SourceGraphic" in2="n" scale="0" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+<a class="sr" href="#main">Skip to content</a>
 
-<div class="grain" aria-hidden="true"></div>
+<!-- pull cord: drag down and release, or press, to switch the theme -->
+<div class="cord" id="cord" aria-hidden="false">
+  <div class="line" id="cordLine"></div>
+  <button class="bead" id="bead" type="button" aria-label="Pull the cord to switch between light and dark"><i></i></button>
+  <span class="hint mono">Pull me</span>
+</div>
 
-<a class="skip-link" href="#main">Skip to content</a>
-
-<header class="nav" id="siteNav">
-  <div class="nav-inner">
-    <a href="#top" class="brand">
-      <span class="brand-mark">MS</span>
-      <span class="brand-name">Mayank&nbsp;Sharma</span>
-    </a>
-
-    <nav class="nav-links" id="navLinks">
-      <a href="#about" data-nav>About</a>
-      <a href="#experience" data-nav>Experience</a>
-      <a href="#ventures" data-nav>Ventures</a>
-      <a href="#capabilities" data-nav>Capabilities</a>
-      <a href="#contact" data-nav>Contact</a>
-      <a href="assets/Mayank-Resume.pdf" class="nav-resume" target="_blank" rel="noopener">Resume ↗</a>
+<header class="nav gut" id="nav">
+  <div class="nav-in">
+    <nav class="links" aria-label="Sections">
+      <a href="#top" data-nav="home" class="on">Home</a>
+      <button class="lnk" type="button" data-door="strategy">Strategy</button>
+      <button class="lnk" type="button" data-door="product">Product &amp; AI</button>
+      <button class="lnk" type="button" data-door="community">Community</button>
+      <button class="lnk" type="button" data-door="toolbox">Toolbox</button>
+      <a href="#story" data-nav="story">My story</a>
+      <a href="#resume" data-nav="resume">Résumé</a>
+      <a href="#contact" data-nav="contact">Contact</a>
     </nav>
-
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="clocks">
+      <div class="clock"><span>Local time</span><b id="clockTime">--:--</b></div>
+      <div class="clock"><b id="clockDate">--</b></div>
+    </div>
+    <button class="menu" id="menu" type="button" aria-expanded="false">Menu</button>
   </div>
 </header>
 
 <main id="main">
-
-  <!-- ===================== HERO ===================== -->
-  <section class="hero" id="top">
-    <div class="hero-inner">
-
-      <div class="hero-text">
-        <p class="eyebrow">Profile Brief · Strategy &amp; Build</p>
-        <h1 class="hero-title">
-          Mayank Sharma
-        </h1>
-        <p class="hero-role">Chief Strategy Officer, Baoiam Innovations — CSE Student, GLA University</p>
-
-        <p class="hero-lede">
-          I sit between the business case and the build. As Chief Strategy Officer at an EdTech startup I've
-          shaped go-to-market plans and cross-functional execution; as a computer science student I design and
-          ship the products those strategies are built for — most recently an AI-assisted health-guidance app.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#ventures" class="btn btn-primary">View my work</a>
-          <a href="assets/Mayank-Resume.pdf" class="btn btn-ghost" download="Mayank-Sharma-Resume.pdf">Download résumé</a>
-        </div>
-
-        <div class="hero-links">
-          <a href="https://github.com/mayank-140207" target="_blank" rel="noopener">GitHub ↗</a>
-          <a href="https://www.linkedin.com/in/mayanksharma140207/" target="_blank" rel="noopener">LinkedIn ↗</a>
-          <a href="mailto:may777ank@gmail.com">Email ↗</a>
-        </div>
-      </div>
-
-      <div class="hero-card">
-        <div class="id-card">
-          <div class="id-photo">
-            <img src="assets/profile.jpg" alt="Portrait of Mayank Sharma" width="900" height="1125">
-          </div>
-          <div class="id-fields">
-            <div class="id-row">
-              <span class="id-label">Status</span>
-              <span class="id-value id-status"><i></i>Open to opportunities</span>
-            </div>
-            <div class="id-row">
-              <span class="id-label">Role</span>
-              <span class="id-value">Chief Strategy Officer</span>
-            </div>
-            <div class="id-row">
-              <span class="id-label">Based in</span>
-              <span class="id-value">Mathura, Uttar Pradesh, India</span>
-            </div>
-            <div class="id-row">
-              <span class="id-label">Focus</span>
-              <span class="id-value">GTM Strategy · Applied AI</span>
+  <!-- hero -->
+  <section class="hero gut" id="top">
+    <div class="hero-in">
+      <div class="hero-copy">
+        <div class="eyebrow mono">CSE student at GLA University</div>
+        <h1>Hi, I'm Mayank.<span class="iam">I am a</span></h1>
+        <div class="flip-wrap">
+          <div class="flip" id="flip" role="text" aria-live="polite">
+            <div class="rings" id="rings"></div>
+            <div class="slab">
+              <div class="pg base" id="pgBase"><span></span></div>
+              <div class="pg top" id="pgTop"><span></span></div>
+              <i class="count" id="count">01 / 05</i>
             </div>
           </div>
         </div>
+        <p class="tag">I build AI products that earn trust, then figure out how to put them in people's hands.</p>
+        <div class="cta">
+          <button class="pillbtn" type="button" data-go="#contact">Start a project <span class="dot"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+          <button class="textlink" type="button" data-go="#doors">See my work</button>
+        </div>
       </div>
-
+      <div class="figure">
+        <img src="assets/portrait.webp" width="728" height="1333" alt="Mayank Sharma in a navy suit" id="portrait">
+        <button class="abilitycard" type="button" data-door="toolbox">My ability card</button>
+      </div>
     </div>
+    <div class="hero-foot mono">
+      <span class="avail">Available for work</span>
+      <span>Based in Mathura, India</span>
+      <span>Scroll to explore ↓</span>
+    </div>
+  </section>
 
-    <div class="metrics-strip" aria-label="Highlights">
-      <div class="metrics-inner">
-        <div class="metric">
-          <span class="metric-num" data-count="500">500</span><span class="metric-plus">+</span>
-          <span class="metric-label">Students engaged as ECell liaison</span>
+  <!-- doors -->
+  <section class="doors-sec gut" id="doors" aria-labelledby="doors-h">
+    <div class="scene" id="scene">
+      <h2 id="doors-h">Magic happens behind the doors</h2>
+      <div class="stage" id="stage"><div class="row" id="row"></div></div>
+      <p class="hintline mono">Hover a door, then click to enter</p>
+    </div>
+  </section>
+
+  <!-- story -->
+  <section class="story" id="story" aria-labelledby="story-h">
+    <div class="story-glow" id="glow"></div>
+    <canvas id="dust" aria-hidden="true"></canvas>
+    <div class="pin gut">
+      <div class="story-in">
+        <div class="left">
+          <div class="eyebrow mono">My story</div>
+          <h2 id="story-h">Let's go back in time.</h2>
+          <div class="year" id="year" aria-live="polite"></div>
+          <div class="range mono" id="range"></div>
+          <div class="prog mono"><span id="pcount">01 / 05</span><span class="bar"><i id="pbar"></i></span></div>
         </div>
-        <div class="metric">
-          <span class="metric-num" data-count="5">5</span>
-          <span class="metric-label">Phase, 60-day GTM launch plan authored</span>
-        </div>
-        <div class="metric">
-          <span class="metric-num" data-count="200">200</span><span class="metric-plus">+</span>
-          <span class="metric-label">Students reached per campus event</span>
-        </div>
-        <div class="metric">
-          <span class="metric-num" data-count="50">50</span>
-          <span class="metric-label">Target enrollments, Founder Batch launch</span>
+        <div class="rail" id="rail">
+          <span class="sdot" id="rdot"></span>
+          <div class="track" id="track"></div>
         </div>
       </div>
     </div>
   </section>
 
-
-  <!-- ===================== ABOUT ===================== -->
-  <section class="section" id="about">
-    <div class="section-inner about-grid">
-      <div class="section-head">
-        <p class="section-eyebrow">01 — About</p>
-        <h2 class="section-title">The case and the build.</h2>
-      </div>
-      <div class="about-body">
-        <p>
-          I'm a B.Tech Computer Science Engineering student at GLA University with an unusual second job:
-          Chief Strategy Officer at Baoiam Innovations, an EdTech startup. My work there sits across strategic
-          planning, go-to-market design, and cross-functional coordination with Operations, Marketing, Product,
-          Design, and Technology — turning a founder's direction into a plan a team can actually execute.
-        </p>
-        <p>
-          That business instinct feeds directly into what I build. When I designed MediHintz, a symptom-triage
-          app, I treated it the same way I'd treat a product launch: define the user problem precisely, scope an
-          MVP that ships, and design the escalation logic before the interface. I care about the same thing in
-          both worlds — decisions that are specific, testable, and grounded in what the data actually says, not
-          in what sounds good in a deck.
-        </p>
-        <p>
-          Outside of Baoiam, I'm a Student Relations Member for GLA University's Entrepreneurship Cell, where I'm
-          the point of contact between the ECell team and the wider student body, and a member of the AstroClub —
-          proof that not everything I do is a strategy document.
-        </p>
+  <!-- beyond code -->
+  <section class="beyond gut" aria-labelledby="beyond-h">
+    <div class="beyond-in">
+      <h2 id="beyond-h">Beyond code</h2>
+      <div class="cards">
+        <article class="card"><h3>Travel</h3><p>I like new places and new experiences. It's also the problem I work on: Karwan, a travel platform where fares, safety, and stays come from verified local information.</p></article>
+        <article class="card"><h3>Astronomy</h3><p>Stargazing sessions and awareness events with AstroClub at GLA. Looking up keeps the problems I work on in perspective.</p></article>
+        <article class="card"><h3>AI workflows</h3><p>I like building with agents. At the Gemini Enterprise training at GLA, I built an agent for MLOps log analysis and drift detection, and I'm exploring more.</p></article>
       </div>
     </div>
   </section>
 
-
-  <!-- ===================== EXPERIENCE ===================== -->
-  <section class="section section-alt" id="experience">
-    <div class="section-inner">
-      <div class="section-head">
-        <p class="section-eyebrow">02 — Experience</p>
-        <h2 class="section-title">Track record.</h2>
+  <!-- resume -->
+  <section class="resume gut" id="resume" aria-labelledby="resume-h">
+    <div class="resume-in">
+      <div>
+        <div class="eyebrow mono">Résumé</div>
+        <h2 id="resume-h" style="margin-top:14px">One page, everything in it.</h2>
+        <p>Experience, projects, skills, and certifications. Read it here or take a copy with you.</p>
+        <div class="rbtns">
+          <a class="pillbtn light" href="assets/Mayank_Sharma_Resume.pdf" target="_blank" rel="noopener">View résumé <span class="dot"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+          <a class="textlink" href="assets/Mayank_Sharma_Resume.pdf" download="Mayank_Sharma_Resume.pdf">Download PDF</a>
+        </div>
       </div>
-
-      <div class="timeline">
-
-        <article class="tl-item">
-          <div class="tl-date"><span>Jun 2026 — Jul 2026</span></div>
-          <div class="tl-dot" aria-hidden="true"></div>
-          <div class="tl-content">
-            <h3>Chief Strategy Officer</h3>
-            <p class="tl-org">Baoiam Innovations Pvt Ltd · Remote</p>
-            <ul>
-              <li>Led strategic planning and business growth initiatives, developing long-term strategy aligned with company vision and objectives.</li>
-              <li>Collaborated across Operations, Marketing, Product, Design, and Technology to drive execution and cross-functional alignment.</li>
-              <li>Identified market opportunities and competitive insights that fed product roadmap planning and go-to-market strategy.</li>
-              <li>Monitored key business metrics and advised leadership on data-driven strategic decisions to improve operational efficiency.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="tl-item">
-          <div class="tl-date"><span>Oct 2025 — Aug 2026</span></div>
-          <div class="tl-dot" aria-hidden="true"></div>
-          <div class="tl-content">
-            <h3>Student Relations Member</h3>
-            <p class="tl-org">Entrepreneurship Cell, GLA University · Mathura</p>
-            <ul>
-              <li>Served as the primary liaison between 500+ students and the ECell team, managing queries, feedback, and communications.</li>
-              <li>Planned and promoted 3+ workshops and entrepreneurship events on campus.</li>
-              <li>Designed outreach strategies with a cross-functional team, reaching 200+ students per event.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="tl-item">
-          <div class="tl-date"><span>Sept 2025 — Jan 2026</span></div>
-          <div class="tl-dot" aria-hidden="true"></div>
-          <div class="tl-content">
-            <h3>Club Member</h3>
-            <p class="tl-org">AstroClub, GLA University · Mathura</p>
-            <ul>
-              <li>Participated in astronomy observation sessions and co-organized stargazing and awareness events on campus.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="tl-item">
-          <div class="tl-date"><span>Aug 2025 — Sept 2029</span></div>
-          <div class="tl-dot" aria-hidden="true"></div>
-          <div class="tl-content">
-            <h3>Bachelor of Technology, Computer Science Engineering</h3>
-            <p class="tl-org">GLA University · Mathura, India</p>
-          </div>
-        </article>
-
-      </div>
+      <a class="rdoc" href="assets/Mayank_Sharma_Resume.pdf" target="_blank" rel="noopener" aria-label="Open Mayank Sharma's résumé as a PDF">
+        <img src="assets/resume-preview.webp" width="910" height="1287" alt="Preview of Mayank Sharma's one-page résumé" loading="lazy">
+      </a>
     </div>
   </section>
 
-
-  <!-- ===================== VENTURES / PROJECTS ===================== -->
-  <section class="section" id="ventures">
-    <div class="section-inner">
-      <div class="section-head">
-        <p class="section-eyebrow">03 — Ventures &amp; Builds</p>
-        <h2 class="section-title">Strategy and product, shipped.</h2>
+  <!-- contact -->
+  <section class="contact gut" id="contact" aria-labelledby="contact-h">
+    <div class="contact-in">
+      <img class="cav" src="assets/face.webp" width="104" height="104" alt="Mayank Sharma smiling with two thumbs up">
+      <div class="avail mono" style="margin-top:22px">Available for new work</div>
+      <h2 id="contact-h"><span class="l1" id="cl1">Got a project?</span><span class="l2" id="cl2">Let's build it together.</span></h2>
+      <p class="sub">I'm open to strategy, AI product, and internship opportunities. Tell me what you're building and I'll get back to you.</p>
+      <div class="cta">
+        <a class="pillbtn light" id="mailBtn" href="mailto:may777ank@gmail.com">Start a project <span class="dot"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <button class="textlink" type="button" data-go="#doors">See my work</button>
       </div>
-
-      <div class="case-grid">
-
-        <article class="case-card case-card--feature">
-          <div class="case-top">
-            <span class="case-tag case-tag--teal">Product · AI</span>
-            <span class="case-status">Shipping in progress</span>
+      <div class="reach"><span>may777ank@gmail.com</span><span>+91 9837773076</span></div>
+      <footer class="foot">
+        <div class="foot-in">
+          <div class="fcols">
+            <div><h4 class="mono">Work</h4>
+              <button class="lnk" type="button" data-door="strategy">Strategy</button>
+              <button class="lnk" type="button" data-door="product">Product &amp; AI</button>
+              <button class="lnk" type="button" data-door="community">Community</button>
+              <button class="lnk" type="button" data-door="toolbox">Toolbox &amp; Credentials</button></div>
+            <div><h4 class="mono">Navigate</h4>
+              <a href="#top">Home</a><a href="#story">My story</a><a href="#contact">Contact</a>
+              <a href="assets/Mayank_Sharma_Resume.pdf" target="_blank" rel="noopener" download>Résumé</a></div>
+            <div><h4 class="mono">Connect</h4>
+              <a href="mailto:may777ank@gmail.com">Email</a><a href="tel:+919837773076">Phone</a>
+              <a href="https://www.linkedin.com/in/mayanksharma140207" target="_blank" rel="noopener">LinkedIn</a>
+              <a href="https://github.com/mayank-140207" target="_blank" rel="noopener">GitHub</a></div>
+            <div><h4 class="mono">Status</h4>
+              <span style="font-size:.9rem;display:block;padding:3px 0">Available for new work</span>
+              <span style="font-size:.9rem;display:block;padding:3px 0">Mathura, India</span></div>
           </div>
-          <h3>MediHintz</h3>
-          <p class="case-role">Health guidance &amp; symptom-triage app</p>
-          <p class="case-desc">
-            A health-guidance app that helps people understand symptoms and next steps without diagnosing or
-            prescribing medication. I designed the core flow — symptom input by voice or text, an AI-assisted
-            assessment, a color-coded risk result (green / yellow / red), and a nearby healthcare-facility
-            finder — and the full UI/UX prototype in Figma, using a calm teal-and-orange visual identity and
-            Google Stitch to accelerate screen generation. The red-flow path includes time-bound escalation
-            nudges, check-in reminders, and a one-tap emergency call.
-          </p>
-          <ul class="case-facts">
-            <li>Progressively shipping the core flow as a Next.js app with a supporting API</li>
-            <li>Full prototype designed end-to-end in Figma</li>
-          </ul>
-          <div class="case-stack">
-            <span>Next.js</span><span>TypeScript</span><span>Figma</span><span>Google Stitch</span>
-          </div>
-          <a href="https://github.com/mayank-140207/MediHintz" class="case-link" target="_blank" rel="noopener">View repository ↗</a>
-        </article>
-
-        <article class="case-card">
-          <div class="case-top">
-            <span class="case-tag case-tag--brass">Go-to-Market</span>
-          </div>
-          <h3>Founder Batch GTM Strategy</h3>
-          <p class="case-role">AI-Ready Careers Program · Baoiam Innovations</p>
-          <p class="case-desc">
-            Led the go-to-market strategy for Baoiam's ₹999 Founder Batch course, targeting 50 enrollments.
-            Structured a five-phase, 60-day launch plan spanning campus activation, digital marketing,
-            influencer outreach, referral programs, and college tie-ups.
-          </p>
-          <div class="case-stack">
-            <span>GTM Strategy</span><span>Campus Marketing</span><span>Growth Planning</span>
-          </div>
-        </article>
-
-        <article class="case-card">
-          <div class="case-top">
-            <span class="case-tag case-tag--brass">Personal Branding</span>
-          </div>
-          <h3>LinkedIn Content System</h3>
-          <p class="case-role">Four-pillar content strategy</p>
-          <p class="case-desc">
-            Built a repeatable, four-pillar content rotation — Decision Story, Real Progress Update, Wrong
-            Assumption Tested, Blunt Opinion Post — to move personal-branding content away from generic
-            motivational posts toward specific, authentic storytelling.
-          </p>
-          <div class="case-stack">
-            <span>Content Strategy</span><span>Personal Branding</span>
-          </div>
-        </article>
-
-      </div>
-
-      <div class="sim-row">
-        <p class="sim-label">Applied learning · Industry simulations</p>
-        <div class="sim-grid">
-          <div class="sim-item">
-            <h4>GenAI-Powered Data Analytics</h4>
-            <p class="sim-org">Tata Group, via Forage · Dec 2025</p>
-            <p>Exploratory data analysis and risk profiling on customer datasets with Python and generative AI; built models to predict payment delinquency and delivered data-storytelling reports for a collections strategy.</p>
-          </div>
-          <div class="sim-item">
-            <h4>Software Engineering</h4>
-            <p class="sim-org">JPMorganChase, via Forage · Dec 2025</p>
-            <p>Implemented REST APIs and backend controllers for microservice communication in Java, and integrated a Kafka message queue with an H2 in-memory database into a real-world workflow.</p>
-          </div>
+          <div class="fbase mono"><span>© 2026 Mayank Sharma</span><a href="#top" style="text-decoration:none">Back to top ↑</a></div>
         </div>
-      </div>
-
+      </footer>
     </div>
   </section>
-
-
-  <!-- ===================== CAPABILITIES ===================== -->
-  <section class="section section-alt" id="capabilities">
-    <div class="section-inner">
-      <div class="section-head">
-        <p class="section-eyebrow">04 — Capabilities</p>
-        <h2 class="section-title">Skills &amp; credentials.</h2>
-      </div>
-
-      <div class="skills-grid">
-        <div class="skill-group">
-          <h3>Languages &amp; Tools</h3>
-          <p>Python, Java, SQL, Git, REST APIs, Kafka</p>
-        </div>
-        <div class="skill-group">
-          <h3>Focus Areas</h3>
-          <p>Data Analytics, Generative AI, Machine Learning, Data Visualization</p>
-        </div>
-        <div class="skill-group">
-          <h3>Design</h3>
-          <p>Figma, UI/UX Prototyping, Google Stitch</p>
-        </div>
-        <div class="skill-group">
-          <h3>Business</h3>
-          <p>Business Strategy, Project Management, Strategic Planning</p>
-        </div>
-      </div>
-
-      <div class="cert-wrap">
-        <p class="cert-label">Certifications &amp; Programs</p>
-        <ul class="cert-grid">
-          <li>Gemini Certified Student &amp; Educator — Google</li>
-          <li>Microsoft Certified: Azure Fundamentals (AZ-900)</li>
-          <li>AI-Powered Performance Ads</li>
-          <li>Data Analyst 101</li>
-          <li>Data Visualization Using Python</li>
-          <li>Claude Code in Action — Anthropic Academy</li>
-          <li>Claude with Google Vertex AI — Anthropic Academy</li>
-          <li>AI Fluency — Anthropic Academy</li>
-          <li>Deloitte Data Analytics Job Simulation</li>
-          <li>Goldman Sachs Operations Job Simulation</li>
-          <li>TCS iON Career Enhancement Program</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ===================== CONTACT ===================== -->
-  <section class="section contact" id="contact">
-    <div class="section-inner contact-inner">
-      <p class="section-eyebrow">05 — Contact</p>
-      <h2 class="contact-title">Let's talk strategy, or let's build.</h2>
-      <p class="contact-lede">
-        Open to strategy, growth, and product-adjacent internships and collaborations. If something here is
-        relevant to what you're working on, I'd like to hear about it.
-      </p>
-
-      <div class="contact-grid">
-        <a href="mailto:may777ank@gmail.com" class="contact-item">
-          <span class="contact-label">Email</span>
-          <span class="contact-value">may777ank@gmail.com</span>
-        </a>
-        <a href="tel:+919837773076" class="contact-item">
-          <span class="contact-label">Phone</span>
-          <span class="contact-value">+91 98377 73076</span>
-        </a>
-        <a href="https://www.linkedin.com/in/mayanksharma140207/" class="contact-item" target="_blank" rel="noopener">
-          <span class="contact-label">LinkedIn</span>
-          <span class="contact-value">/in/mayanksharma140207</span>
-        </a>
-        <a href="https://github.com/mayank-140207" class="contact-item" target="_blank" rel="noopener">
-          <span class="contact-label">GitHub</span>
-          <span class="contact-value">/mayank-140207</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
 </main>
 
-<footer class="footer">
-  <div class="footer-inner">
-    <span>© 2026 Mayank Sharma. All rights reserved.</span>
-    <a href="#top">Back to top ↑</a>
+<div class="veil" id="veil"></div>
+<div class="page" id="page" hidden role="dialog" aria-modal="true" aria-labelledby="pageTitle">
+  <div class="page-in gut">
+    <h2 id="pageTitle"></h2>
+    <p class="lede" id="pageLede"></p>
+    <div class="stack" id="stack"></div>
   </div>
-</footer>
-
-<button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+</div>
+<button class="back" id="back" type="button"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Back to the doors</button>
 
 <script src="script.js"></script>
 </body>
