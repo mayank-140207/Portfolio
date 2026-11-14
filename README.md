@@ -5,7 +5,7 @@
 > I build AI products that earn trust, then figure out how to put them in people's hands.
 > Problem first, product second, code last.
 
-Portfolio: https://mayanksharma14.vercel.app
+Portfolio: https://portfolio-mayanksharma.vercel.app
 
 ---
 

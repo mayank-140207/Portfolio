@@ -145,7 +145,7 @@ const stage = $("#stage"), row = $("#row"), scene = $("#scene"), veil = $("#veil
 const slots = [], infos = [];
 DOORS.forEach((d, i) => {
   const s = el("button", "slot"); s.type = "button"; s.dataset.i = i; s.setAttribute("aria-label", "Open " + d.name);
-  s.innerHTML = `<span class="door" style="--c:${d.color}"><span class="frame"></span><span class="leaf"><span class="plate">${d.plate.join("<br>")}</span><span class="lever"></span></span><span class="enter">Click to enter</span></span>`;
+  s.innerHTML = `<span class="door" style="--c:${d.color}"><span class="frame"></span><span class="inner"></span><span class="leaf"><span class="plate">${d.plate.join("<br>")}</span><span class="lever"></span></span><span class="enter">Click to enter</span></span>`;
   row.appendChild(s); slots.push(s);
   const side = i < 2 ? "r" : "l";
   const inf = el("div", "info " + side, `<h3>${d.name}</h3><span class="sub mono">${d.list.sub}</span><ul>${d.list.items.map(x => `<li>${x}</li>`).join("")}</ul>`);
@@ -190,8 +190,9 @@ async function enterDoor(i) {
     window.scrollTo({ top: scrollY + dr.top - (innerHeight - dr.height) / 2, behavior: "instant" });
     await wait(60);
   }
-  const h = $(".lever", door).getBoundingClientRect(), sc = scene.getBoundingClientRect();
-  scene.style.transformOrigin = `${h.left + h.width / 2 - sc.left}px ${h.top + h.height / 2 - sc.top}px`;
+  door.classList.add("open"); await wait(950);
+  const h = door.getBoundingClientRect(), sc = scene.getBoundingClientRect();
+  scene.style.transformOrigin = `${h.left + h.width / 2 - sc.left}px ${h.top + h.height * 0.62 - sc.top}px`;
   root.style.overflow = "hidden";
   scene.classList.add("zoom"); scene.style.transform = "scale(12)"; zoomed = true;
   await wait(780); veil.classList.add("on");
@@ -227,7 +228,10 @@ async function closePage() {
     scene.classList.remove("zoomout");
   } else { veil.classList.remove("on"); await wait(reduce ? 0 : 300); }
   scene.style.transform = ""; scene.style.transformOrigin = ""; zoomed = false;
-  root.style.overflow = ""; busy = false; updateNavState();
+  root.style.overflow = "";
+  const od = slots[openIdx] && slots[openIdx].firstElementChild;
+  if (od && od.classList.contains("open") && !reduce) { od.classList.remove("open"); await wait(950); } else if (od) od.classList.remove("open");
+  busy = false; updateNavState();
   const s = slots[openIdx]; if (s) s.focus({ preventScroll: true });
 }
 back.addEventListener("click", closePage);
