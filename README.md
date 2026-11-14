@@ -57,7 +57,7 @@ A static site with no build step: plain HTML, CSS and JavaScript.
 - A spiral-bound flip card that rotates through my roles
 - Four doors (Strategy, Product & AI, Community, Toolbox & Credentials) that zoom open into pages of stacking project cards
 - A pinned "My story" timeline with a rolling year
-- A résumé section and a contact section
+- A resume section and a contact section
 
 ### Structure
 
@@ -68,8 +68,8 @@ script.js
 assets/
   portrait.webp             hero photo (background removed)
   casual.webp, face.webp    contact photo (background removed)
-  resume-preview.webp       résumé preview image
-  Mayank_Sharma_Resume.pdf  résumé
+  resume-preview.webp       resume preview image
+  Mayank_Sharma_Resume.pdf  resume
 ```
 
 ---
